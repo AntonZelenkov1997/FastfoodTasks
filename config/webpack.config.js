@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 const fs = require('fs');
@@ -324,10 +325,10 @@ module.exports = function(webpackEnv) {
           use: [
             {
               options: {
+                emitWarning: true,
                 formatter: require.resolve('react-dev-utils/eslintFormatter'),
                 eslintPath: require.resolve('eslint'),
-                resolvePluginsRelativeTo: __dirname,
-                
+                resolvePluginsRelativeTo: __dirname,     
               },
               loader: require.resolve('eslint-loader'),
             },
